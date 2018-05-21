@@ -48,7 +48,7 @@ Download the module files.
 ### Step 3: Give access to module
 
 * Take login into admin area. 
-* Goto System > Users -> User Groups > Edit Administrator user group
+* Goto System > Users -> User Groups > Edit "Administrator" user group
 * Check checkbox in Access Permission
   ```php
   extension/module/duell_integration 
