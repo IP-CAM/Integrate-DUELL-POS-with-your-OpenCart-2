@@ -33,7 +33,7 @@ Download the module files.
   if (!$order_info['order_status_id'] && $order_status_id) {
   ```
   
-  add below code at the end of if function. Make sure inside the above if condition
+  Add below code at the end of **if** condition. Make sure inside the code is inside above mentioned **if** condition
   ```php
   /*
   * Duell Stock sync
