@@ -80,19 +80,14 @@ Download the module files.
 * Every 3 hours
 
   ```bash
-  * */3 * * * /usr/bin/curl http://10.0.0.80/duell-others/duell-opencart/system/duellcron.php >/dev/null 2>&1
+  * */3 * * * /usr/bin/curl http://<YOURWEBSHOP.COM>/system/duellcron.php >/dev/null 2>&1
   ```
 * Every night 3am
 
   ```bash
-  * 3 * * * /usr/bin/curl http://10.0.0.80/duell-others/duell-opencart/system/duellcron.php >/dev/null 2>&1
+  * 3 * * * /usr/bin/curl http://<YOURWEBSHOP.COM>/system/duellcron.php >/dev/null 2>&1
   ```
  
-
-
-
-
-
 LICENSE
 -------
 
