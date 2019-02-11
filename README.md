@@ -8,8 +8,8 @@ Prerequisites
 
 This module requires opencart 2.x.
 
-If you want to use this module with opencart 1.x version, please use [1.x](https://github.com/Kasseservice/opencart-1x).
-
+* If you want to use this module with opencart 1.x version, please use [1.x](https://github.com/Kasseservice/opencart-1x).
+* If you want to use this module with opencart 3.x version, please use [3.x](https://github.com/Kasseservice/opencart-3x).
 
 Installation
 ------------
