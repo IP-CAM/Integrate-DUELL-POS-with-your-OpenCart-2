@@ -87,6 +87,25 @@ Download the module files.
   ```bash
   * 3 * * * /usr/bin/curl http://<YOURWEBSHOP.COM>/system/duellcron.php >/dev/null 2>&1
   ```
+  
+  
+**Note:** Make sure .htaccess file inside system folder have below code.
+
+  Find below code
+  ```
+  <Files *.*>
+    Order Deny,Allow
+    Deny from all
+  </Files>
+  ```
+  Add below code 
+
+  ```
+  <Files "duellcron.php">
+      Allow from all
+  </Files>
+  ```
+
  
 LICENSE
 -------
