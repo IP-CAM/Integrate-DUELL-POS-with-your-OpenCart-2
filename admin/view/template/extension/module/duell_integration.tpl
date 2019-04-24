@@ -1,6 +1,6 @@
 <div id="blocker" style="display: none;"><div><?php echo $text_duell_integration_processing; ?>...</div></div>
- <?php echo $header; ?>
-  <?php echo $column_left; ?>
+<?php echo $header; ?>
+<?php echo $column_left; ?>
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
@@ -40,8 +40,8 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="duell_integration_client_number"><span data-toggle="tooltip" title="<?php echo $help_text_duell_integration_client_number; ?>"><?php echo $text_duell_integration_client_number; ?></span></label>
             <div class="col-sm-10">
-              <input type="number" name="duell_integration_client_number" value="<?php echo $duell_integration_client_number; ?>" placeholder="<?php echo $text_duell_integration_client_number; ?>" class="form-control" />
-               <?php if ($error_duell_integration_client_number) { ?>
+              <input type="text" name="duell_integration_client_number" value="<?php echo $duell_integration_client_number; ?>" placeholder="<?php echo $text_duell_integration_client_number; ?>" class="form-control" />
+              <?php if ($error_duell_integration_client_number) { ?>
               <div class="text-danger"><?php echo $error_duell_integration_client_number; ?></div>
               <?php } ?>
             </div>
@@ -52,7 +52,7 @@
             <label class="col-sm-2 control-label" for="duell_integration_client_token"><span data-toggle="tooltip" title="<?php echo $help_text_duell_integration_client_token; ?>"><?php echo $text_duell_integration_client_token; ?></span></label>
             <div class="col-sm-10">
               <input type="text" name="duell_integration_client_token" value="<?php echo $duell_integration_client_token; ?>" placeholder="<?php echo $text_duell_integration_client_token; ?>" class="form-control" />
-               <?php if ($error_duell_integration_client_token) { ?>
+              <?php if ($error_duell_integration_client_token) { ?>
               <div class="text-danger"><?php echo $error_duell_integration_client_token; ?></div>
               <?php } ?>
             </div>
@@ -63,7 +63,7 @@
             <label class="col-sm-2 control-label" for="duell_integration_department_token"><span data-toggle="tooltip" title="<?php echo $help_text_duell_integration_department_token; ?>"><?php echo $text_duell_integration_department_token; ?></span></label>
             <div class="col-sm-10">
               <input type="text" name="duell_integration_department_token" value="<?php echo $duell_integration_department_token; ?>" placeholder="<?php echo $text_duell_integration_department_token; ?>" class="form-control" />
-               <?php if ($error_duell_integration_department_token) { ?>
+              <?php if ($error_duell_integration_department_token) { ?>
               <div class="text-danger"><?php echo $error_duell_integration_department_token; ?></div>
               <?php } ?>
             </div>
@@ -175,8 +175,8 @@
     font-size: 24px;
   }
 </style>
-    <script type="text/javascript"><!--
-   function blockUI(        )
+<script type="text/javascript"><!--
+  function blockUI(        )
   {
     $("#blocker").css('display', "");
   }

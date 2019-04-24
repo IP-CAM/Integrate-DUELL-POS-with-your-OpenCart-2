@@ -114,7 +114,7 @@ class Duell {
 
             if (isset($this->settings['duell_integration_status']) && $this->settings['duell_integration_status'] == 1) {
 
-                if (!isset($this->settings['duell_integration_client_number']) || (int) $this->settings['duell_integration_client_number'] <= 0) {
+                if (!isset($this->settings['duell_integration_client_number']) || $this->settings['duell_integration_client_number'] <= 0) {
                     $text_error = $this->_duellLang['duell_client_number_not_set'];
 
                     $this->log('callDuellStockSync() - ' . $text_error);
@@ -168,7 +168,7 @@ class Duell {
                 $start = 0;
                 $limit = $this->limit;
 
-                $apiData = array('client_number' => (int) $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department' => $this->settings['duell_integration_department_token'], 'length' => $limit, 'start' => $start);
+                $apiData = array('client_number' => $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department' => $this->settings['duell_integration_department_token'], 'length' => $limit, 'start' => $start);
 
                 $wsdata = $this->call('all/product/stock', 'get', $apiData, 'json', $type);
 
@@ -187,7 +187,7 @@ class Duell {
 
                             while ($totalRecord > $limit && $totalRecord > $nextCounter) {
 
-                                $apiData = array('client_number' => (int) $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department_token' => $this->settings['duell_integration_department_token'], 'length' => $limit, 'start' => $nextCounter);
+                                $apiData = array('client_number' => $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department_token' => $this->settings['duell_integration_department_token'], 'length' => $limit, 'start' => $nextCounter);
 
                                 $wsdata = $this->call('all/product/stock', 'get', $apiData, 'json', $type);
 
@@ -248,7 +248,7 @@ class Duell {
 
                 if (isset($this->settings['duell_integration_status']) && $this->settings['duell_integration_status'] == 1) {
 
-                    if (!isset($this->settings['duell_integration_client_number']) || (int) $this->settings['duell_integration_client_number'] <= 0) {
+                    if (!isset($this->settings['duell_integration_client_number']) || $this->settings['duell_integration_client_number'] <= 0) {
                         $text_error = $this->_duellLang['duell_client_number_not_set'];
                         $this->log('callDuellStockUpdate() - ' . $text_error);
                         $this->duellMailAlert($text_error, 422);
@@ -285,7 +285,7 @@ class Duell {
                         }
                     }
                     if (!empty($product_data)) {
-                        $apiData = array('client_number' => (int) $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department_token' => $this->settings['duell_integration_department_token'], 'product_data' => $product_data);
+                        $apiData = array('client_number' => $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department_token' => $this->settings['duell_integration_department_token'], 'product_data' => $product_data);
 
                         $wsdata = $this->call('product/adjust-stock', 'post', $apiData);
 
