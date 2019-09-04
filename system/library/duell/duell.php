@@ -169,7 +169,7 @@ class Duell {
                 $limit = $this->limit;
 
                 $apiData = array('client_number' => $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department' => $this->settings['duell_integration_department_token'], 'length' => $limit, 'start' => $start);
-
+                $apiData['filter[view_on_webshop]'] = true;
                 $wsdata = $this->call('all/product/stock', 'get', $apiData, 'json', $type);
 
                 if ($wsdata['status'] === true) {
@@ -188,7 +188,7 @@ class Duell {
                             while ($totalRecord > $limit && $totalRecord > $nextCounter) {
 
                                 $apiData = array('client_number' => $this->settings['duell_integration_client_number'], 'client_token' => $this->settings['duell_integration_client_token'], 'department_token' => $this->settings['duell_integration_department_token'], 'length' => $limit, 'start' => $nextCounter);
-
+                                $apiData['filter[view_on_webshop]'] = true;
                                 $wsdata = $this->call('all/product/stock', 'get', $apiData, 'json', $type);
 
                                 if ($wsdata['status'] === true) {
